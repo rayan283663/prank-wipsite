@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقلب الأصدقاء</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #cc0000;
+        }
+
+        img {
+            display: none;
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <h1>اضغط على الزر إذا كنت شجاعًا!</h1>
+    <button onclick="showScaryImage()">اضغط هنا</button>
+    <img id="scary-image" src="https://i.pinimg.com/236x/75/f7/93/75f793d5293c6e0c5499bd46525c5934.jpg" alt="صورة مخيفة">
+    
+    <footer>
+        <p>تم التصميم بواسطة <strong>Rayan Bustanji</strong></p>
+    </footer>
+    
+    <script>
+        function showScaryImage() {
+            const img = document.getElementById('scary-image');
+            img.style.display = 'block';
+            setTimeout(() => {
+                alert('هاهاها! خفت؟');
+            }, 500); // تظهر الرسالة بعد نصف ثانية
+        }
+    </script>
+</body>
+</html>
